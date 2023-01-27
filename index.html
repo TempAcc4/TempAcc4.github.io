@@ -1,52 +1,156 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Raise the Driving Age</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Raising the Driving Age</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+    const toggle = document.getElementById("dark-mode-toggle");
+const body = document.querySelector("body");
+
+body.classList.add("dark-mode");
+toggle.innerHTML = "Light Mode";
+
+toggle.addEventListener("click", function() {
+  body.classList.toggle("dark-mode");
+  if (body.classList.contains("dark-mode")) {
+    toggle.innerHTML = "Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggle.innerHTML = "Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+});
+
+    </script>
   </head>
   <body>
     <header>
-      <h1>Raise the Driving Age</h1>
+      <h1>Raising the Driving Age</h1>
     </header>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#reasons">Reasons</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reasons">Reasons for raising the age</a></li>
+        <li><a href="#data">Supporting Data</a></li>
+        <li><a href="#counterarguments">Counterarguments</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
       </ul>
     </nav>
     <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>This website is dedicated to promoting the idea of raising the driving age. We believe that by raising the age at which individuals can legally begin to drive, we can help to reduce accidents and save lives on our roads.</p>
-      </section>
       <section id="reasons">
-        <h2>Reasons to Raise the Driving Age</h2>
+        <h2>Reasons for raising the age</h2>
+        <p>There are several reasons why raising the driving age would be beneficial. Some of these include:</p>
         <ul>
-          <li>Younger individuals are more likely to be involved in accidents due to their lack of experience and maturity.</li>
-          <li>Raising the driving age would give young people more time to develop the skills and maturity necessary to drive safely.</li>
-          <li>It would also reduce the number of teenage drivers on the road, making it safer for all individuals.</li>
+          <li>Younger drivers have an under developed brain</li>
+          <li>Additional time with a learners permit will help teenagers gain more experience</li>
+          <li>It will reduce the number of teenage deaths and injuries on the road</li>
+          <li>Teenagers will be forced to walk/bike instead of drive, leading to lower obesity rates and less polution</li>
         </ul>
       </section>
-      <section id="resources">
-        <h2>Resources</h2>
-        <ul>
-          <li><a href="https://www.aaa.com/aaa/about-aaa/newsroom/news-releases/2017/07/aaa-supports-raising-minimum-age-to-obtain-a-drivers-license-to-18-years-old.html">AAA supports raising the minimum age to obtain a driver's license to 18 years old</a></li>
-          <li><a href="https://www.nhtsa.gov/road-safety/teen-driving">NHSTA Teen Driving</a></li>
-        </ul>
+      <section id="data">
+        <h2>Supporting Data</h2>
+        <p>Acording to rochester, the brain stops developing at the age of 25, that includes the rational part of the brain. Without this part of the brain being fully developed, teenagers are more likely to get in crashes. The claim that teenagers shouldn't be able to drive is further prooven by a study by The American Medical Association. They stated that since 1996 graduated driver licensing has caused 1348 fewer fatal crashes among 16-year-olds but 1086 more fatal crashes among 18-year-olds. This means that there have been at least 300 fewer deaths because the age people have decided to start driving has been pushed back.</p>
       </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>If you would like to get involved or have any questions, please contact us at:</p>
+      <section id="counterarguments">
+        <h2>Counterarguments</h2>
+        <p>While there are many reasons to raise the driving age, there are some arguments you may have against my article, such as:</p>
         <ul>
-            <li>Email: info@raisethedrivingage.com</li>
-            <li>Phone: 555-555-5555</li>
+          <li>Biking and walking aren’t good substitutes for when teenagers need to be somewhere</li>
+          <li>It could lead to increased reliance on public transportation, which may not be available in all areas</li>
+          <li>Teenagers are just getting in crashes because they’re new drivers</li>
         </ul>
+        <p>It's important that I adress these potential counter arguments. First off, biking and walking is not a fullprooth method for getting around, but teenagers can use Uber and Lyft or public transportaion or even friends/family to get around. As for the increased reliance on public transportation, I gave other alternatives in my previos sentance. Lastly, this is partialy true, as the studys in the "Supporting Data" section of the articale said, raising the driving age has helped save 300 lives.</p>
+      </section>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>To conclude, the driving age should be raised. It’ll help save lives, and it’ll give teens brains more time to develop. It’ll also save teens lives indirectly and make them more healthy.</p>
       </section>
     </main>
     <footer>
-      <p>Copyright ©2022 Raise the Driving Age</p>
+      <p>Contact asilovic@goldrushcs.org for any questions</p>
     </footer>
   </body>
 </html>
+<style>
+    /* Default theme */
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+footer {
+    background-color: #f5f5f5;
+}
+/* Dark mode theme */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Common styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+header {
+  background-color: #555;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Specific styles for different sections */
+#reasons {
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+#data {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+#counterarguments {
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+#conclusion {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+</style>
